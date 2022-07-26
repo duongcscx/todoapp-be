@@ -13,7 +13,7 @@ module.exports = {
       {
         id: 'e60892d8-0359-11ed-b939-0242ac120002',
         firstName: 'Duong',
-        lastName: 'Nguyen',
+        lastName: 'Nguyen Xuan',
         email: 'duong_nguyen_xuan@mckinsey.com',
         password: hashPassword('test123'),
       },
