@@ -17,5 +17,11 @@ module.exports = {
       process.env.DB_PORT
     }/${process.env.DB_NAME}`,
     dialect: 'postgres',
+    ssl: true,
+    dialectOptions: {
+      ssl: {
+        require: true,
+      },
+    },
   },
 };
