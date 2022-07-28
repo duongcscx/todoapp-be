@@ -63,7 +63,7 @@ jobs:
           node-version: '14'
           
       - name: Install dependencies
-          run: yarn
+        run: yarn
         
       - name: Run coverage report
         run: yarn coverage
