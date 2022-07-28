@@ -40,6 +40,6 @@ jobs:
     steps:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.2.0
-#       with:
-#         host: ${{ secrets.SONARQUBE_HOST }}
-#         login: ${{ secrets.SONARQUBE_TOKEN }}
+      with:
+        host: ${{ secrets.SONARQUBE_HOST }}
+        login: ${{ secrets.SONARQUBE_TOKEN }}
