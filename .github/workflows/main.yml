@@ -102,7 +102,7 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - run: yarn add dependency-check
+      - run: npm install dependency-check
 
       - name: Dependency Check
         run: dependency-check ./package.json --verbose
