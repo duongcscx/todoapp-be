@@ -148,12 +148,14 @@ jobs:
       - name: Install dependencies
         run: yarn
       - run: bundle install
-      - run: gem install licensed
-      - name: License check
-        uses: jonabc/licensed-ci@v1
+      - uses: jonabc/licensed-ci@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          command: bundle exec licensed
+      - uses: jonabc/setup-licensed@v1
+        with:
+         version: 2.x
+      - run: licensed status
+      - run: licensed
 
   container_scan:
     name: Container scan
