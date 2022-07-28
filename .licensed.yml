@@ -1,6 +1,6 @@
 sources:
   bower: false
-  bundler: false
+  bundler: true
 allowed:
   - mit
   - apache-2.0
