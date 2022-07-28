@@ -6,7 +6,7 @@ name: Build and deploy container app to Azure Web App - todowebappduong
 on:
   push:
     branches:
-      - develop
+      - master
   workflow_dispatch:
 
 jobs:
