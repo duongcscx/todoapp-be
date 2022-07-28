@@ -8,3 +8,5 @@ allowed:
   - bsd-3-clause
   - cc0-1.0
   - isc
+  - wtfpl
+  - other
