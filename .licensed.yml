@@ -4,10 +4,3 @@ sources:
 allowed:
   - mit
   - apache-2.0
-
-reviewed:
-  bundler:
-    - pathname-common_prefix
-    - racc
-    - reverse_markdown
-    - ruby2_keywords
