@@ -105,7 +105,7 @@ jobs:
       - run: yarn add dependency-check
 
       - name: Dependency Check
-        run: yarn dependency-check ./package.json --verbose
+        run: yarn dependency-check ./src/package.json --verbose
 
   secret_scan:
     name: Secret scan
