@@ -141,16 +141,13 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6
-          bundler-cache: true # improve performance on subsequent runs
-          cache-version: 1
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-          cache: npm # cache dependencies for faster subsequent runs.
       # install your projects dependencies
       - name: Install dependencies
         run: yarn
-      - run: bundle install --system
+      - run: bundle install
       - name: License check
         uses: jonabc/licensed-ci@v1
         with:
