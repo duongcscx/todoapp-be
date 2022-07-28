@@ -104,12 +104,8 @@ jobs:
 
       - run: yarn add dependency-check
 
-      - run: |
-          pwd
-          ls
-
       - name: Dependency Check
-        run: yarn dependency-check ./src/package.json --verbose
+        run: yarn dependency-check ./src/index.js --verbose
 
   secret_scan:
     name: Secret scan
