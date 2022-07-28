@@ -154,8 +154,7 @@ jobs:
         uses: jonabc/licensed-ci@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          command: bundle install
-      - run: bundle exec licensed # or bin/licensed when using binstubs
+          command: bundle exec licensed
 
   container_scan:
     name: Container scan
