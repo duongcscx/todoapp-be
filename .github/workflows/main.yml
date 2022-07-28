@@ -34,3 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  sonarqube:
+    name: SonarQube Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - name: SonarQube Scan
+      uses: kitabisa/sonarqube-action@v1.2.0
+#       with:
+#         host: ${{ secrets.SONARQUBE_HOST }}
+#         login: ${{ secrets.SONARQUBE_TOKEN }}
