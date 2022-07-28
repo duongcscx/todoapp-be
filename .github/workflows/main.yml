@@ -68,6 +68,8 @@ jobs:
       - name: Run coverage report
         run: yarn coverage
 
+      - run: yarn add typescript
+
       - name: SonarQube Scan
         uses: kitabisa/sonarqube-action@v1.2.0
         with:
@@ -107,7 +109,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Build container
-        run: docker build --build-arg ENV=$NODE_ENV --build-arg PORT=$PORT -t "todoapp" --no-cache . -t test_container:${{ github.sha }}
+        run: docker build --build-arg ENV=$NODE_ENV --build-arg PORT=$PORT --no-cache . -t test_container:${{ github.sha }}
         
       - name: Scan container
         uses: Azure/container-scan@v0
