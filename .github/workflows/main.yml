@@ -104,6 +104,7 @@ jobs:
       HASH_KEY_PASSWORD: "HASH_KEY_PASSWORD"
       TOKEN_SECRET_KEY: "TOKEN_SECRET_KEY"
       TOKEN_EXPIRES_IN: "240m"
+      DOCKLE_HOST: "unix:///var/run/docker.sock"
 
     steps:
       - uses: actions/checkout@v3
@@ -114,4 +115,4 @@ jobs:
       - name: Scan container
         uses: Azure/container-scan@v0
         with:
-          image-name: test_container
+          image-name: test_container:latest
