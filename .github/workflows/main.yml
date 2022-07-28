@@ -148,12 +148,12 @@ jobs:
       - name: Install dependencies
         run: yarn
       - run: bundle install
-      - uses: jonabc/licensed-ci@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
       - uses: jonabc/setup-licensed@v1
         with:
          version: 2.x
+      - uses: jonabc/licensed-ci@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - run: licensed status
       - run: licensed
 
