@@ -102,10 +102,10 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - run: npm install dependency-check
+      - run: yarn add dependency-check
 
       - name: Dependency Check
-        run: dependency-check ./package.json --verbose
+        run: yarn dependency-check ./package.json --verbose
 
   secret_scan:
     name: Secret scan
