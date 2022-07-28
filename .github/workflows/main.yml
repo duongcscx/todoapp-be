@@ -102,10 +102,10 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - run: yarn add dependency-check
+      - run: npm install -g depcheck
 
       - name: Dependency Check
-        run: yarn dependency-check ./src/index.js --verbose
+        run: npx depcheck
 
   secret_scan:
     name: Secret scan
