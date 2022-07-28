@@ -150,6 +150,7 @@ jobs:
       # install your projects dependencies
       - name: Install dependencies
         run: yarn
+      - run: bundle install
       - name: License check
         uses: jonabc/licensed-ci@v1
         with:
