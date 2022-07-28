@@ -148,6 +148,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - run: bundle install
+      - run: gem install licensed
       - name: License check
         uses: jonabc/licensed-ci@v1
         with:
