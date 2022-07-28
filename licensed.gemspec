@@ -7,7 +7,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "licensed"
   #   spec.version       = Licensed::VERSION
-#   spec.version       = "v1.7.0"
+  spec.version       = "3.7.2"
   spec.authors       = ["GitHub"]
   spec.email         = ["opensource+licensed@github.com"]
 
