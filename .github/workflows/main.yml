@@ -12,7 +12,7 @@ on:
 
 jobs:
   unit_test:
-    name: Unit testing
+    name: Testing (Unit, Integration)
     runs-on: ubuntu-latest
     
     env:
@@ -38,8 +38,9 @@ jobs:
 
       - name: Run unit tests
         run: yarn test
+
   sonarqube:
-    name: SonarQube Trigger
+    name: Static code analysis
     runs-on: ubuntu-latest
     steps:
     - name: SonarQube Scan
