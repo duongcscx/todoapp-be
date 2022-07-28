@@ -2,11 +2,12 @@
 # frozen_string_literal: true
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "licensed/version"
+# require "licensed/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "licensed"
-  spec.version       = Licensed::VERSION
+  #   spec.version       = Licensed::VERSION
+  spec.version       = "v1.7.0"
   spec.authors       = ["GitHub"]
   spec.email         = ["opensource+licensed@github.com"]
 
