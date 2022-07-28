@@ -1,2 +1,2 @@
-ignores: ["eslint", "babel-*", lint-staged]
+ignores: ["eslint", "babel-*", "lint-staged", "pg"]
 skip-missing: true
