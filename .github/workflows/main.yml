@@ -192,6 +192,7 @@ jobs:
         with:
           target: 'http://localhost:3001'
           cmd_options: --autooff
+          fail_action: false
 
   container_scan:
     name: Container scan
