@@ -192,6 +192,7 @@ jobs:
         with:
           target: 'http://localhost:3001'
           cmd_options: --autooff
+          rules_file_name: '.zap/rules.tsv'
 
   container_scan:
     name: Container scan
