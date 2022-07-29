@@ -183,7 +183,7 @@ jobs:
         run: yarn
 
       - name: Start website
-        run: yarn run start:development
+        run: yarn run start:development &
 
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.7.0
