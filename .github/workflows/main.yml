@@ -187,6 +187,8 @@ jobs:
           yarn run start:development &
           sleep 10
 
+      - run: cat './.zap/rules.tsv'
+
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.7.0
         with:
