@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://duongnxtodoacr.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_4d44461c25184e6db06e0112d61eabba }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_4e5642a2149147b992a7bdde8e89fca1 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_8990c8cdbe5c42509e5ebae03223e6f3 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_c78a8e82bafc4f4eb2e6fd054d44979e }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: duongnxtodoacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_4d44461c25184e6db06e0112d61eabba }}/todoapp:${{ github.sha }}
+        tags: duongnxtodoacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_8990c8cdbe5c42509e5ebae03223e6f3 }}/todoapp:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'duongnxtodobackend'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b7c482d03527483d83f63cc039a675fe }}
-        images: 'duongnxtodoacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_4d44461c25184e6db06e0112d61eabba }}/todoapp:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_117d59c9fc5d435887fbeea0019dafaf }}
+        images: 'duongnxtodoacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_8990c8cdbe5c42509e5ebae03223e6f3 }}/todoapp:${{ github.sha }}'
