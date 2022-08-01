@@ -12,10 +12,6 @@ on:
 jobs:
   build:
     runs-on: 'ubuntu-latest'
-    env:
-      PORT: 3001
-      ENV: 'production'
-
     steps:
     - uses: actions/checkout@v2
 
@@ -36,8 +32,8 @@ jobs:
         tags: duongnxtodoacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_5323633f7bb64bd293328a522102a62c }}/todoapp:${{ github.sha }}
         file: ./Dockerfile
         build-args: |
-          ENV=$ENV
-          PORT=$PORT
+          ENV=3001
+          PORT=production
 
   deploy:
     runs-on: ubuntu-latest
