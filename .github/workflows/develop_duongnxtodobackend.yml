@@ -35,7 +35,8 @@ jobs:
         push: true
         tags: duongnxtodoacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_5323633f7bb64bd293328a522102a62c }}/todoapp:${{ github.sha }}
         file: ./Dockerfile
-        build-args: [ENV=$ENV, PORT=$PORT]
+        build-args: ENV=$ENV
+        build-args: PORT=$PORT
 
   deploy:
     runs-on: ubuntu-latest
